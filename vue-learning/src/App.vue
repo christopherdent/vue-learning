@@ -1,5 +1,11 @@
 <template>
-<h1>Hello World</h1>
+
+<div class="container">
+
+  <Header />
+
+</div>
+
 
 </template>
 
@@ -7,12 +13,12 @@
  
 
 //import components here 
-
+import Header from './components/Header'
 ///register components below 
 export default {
   name: 'App',
   components: {
-     
+     Header
   }
 }
 </script>
@@ -32,7 +38,14 @@ body {
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
+  bord#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}r: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
 }
