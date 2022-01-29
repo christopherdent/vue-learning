@@ -2,7 +2,7 @@
 
 <div class="container">
 
-  <Header />
+  <Header title="Task Tracker" />
 
 </div>
 
@@ -33,22 +33,18 @@ export default {
 body {
   font-family: 'Poppins', sans-serif;
 }
+
 .container {
   max-width: 500px;
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  bord#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}r: 1px solid steelblue;
+  border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
 }
+
+
 .btn {
   display: inline-block;
   background: #000;
@@ -62,12 +58,15 @@ body {
   font-size: 15px;
   font-family: inherit;
 }
+
 .btn:focus {
   outline: none;
 }
+
 .btn:active {
   transform: scale(0.98);
 }
+
 .btn-block {
   display: block;
   width: 100%;

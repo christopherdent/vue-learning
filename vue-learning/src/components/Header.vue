@@ -1,22 +1,44 @@
 <template>
+
     <div class="header">
     
         <h1>  
 
-            Task Tracker
+            {{ title }}
 
         </h1>
+        <Button 
+        text = 'add task'
+        color  = 'green'
+        />
 
+        <Button 
+        text = 'update task'
+        color  = 'blue'
+        />
 
-    </div>    
+        <Button 
+        text = 'delete task'
+        color  = 'red'
+        />
+
+   </div> 
+
 </template>
 
 
 <script>
+import Button from './Button'
 
  export default {
      name: 'Header',
-     }
+     props: {
+         title: String,
+      },
+      components: {
+          Button
+      }
+    }
 </script>
 
 
