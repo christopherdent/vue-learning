@@ -1,6 +1,6 @@
 <template>
-    <button v-bind:style="{ background: color }"  class="btn">{{text}} </button>
-    
+    <button v-on:click="onClick()" v-bind:style="{ background: color }"  class="btn">{{text}} </button>
+    <!-- with shortcuts <button @click="onClick()" :style="{ background: color }"  class="btn">{{text}} </button> -->
 </template>
 
 
@@ -11,6 +11,11 @@
         props: {
             text: String,
             color: String
+        },
+        methods: {
+            onClick() {
+                console.log('clicked')
+            }
         }
     }
 

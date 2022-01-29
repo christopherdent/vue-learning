@@ -12,15 +12,7 @@
         color  = 'green'
         />
 
-        <Button 
-        text = 'update task'
-        color  = 'blue'
-        />
-
-        <Button 
-        text = 'delete task'
-        color  = 'red'
-        />
+       
 
    </div> 
 
