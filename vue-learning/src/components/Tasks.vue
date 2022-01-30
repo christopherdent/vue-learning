@@ -1,7 +1,11 @@
 <template>
     <div>
         <div :key="task.id" v-for="task in tasks">
-            <Task :task="task"/>
+            <Task v-on:delete-task="$emit('delete-task', task.id)" 
+            
+            
+            :task="task"/>
+ <!-- <button v-on:click="onClick()" v-bind:style="{ background: color }"  class="btn">{{text}} </button> -->
         </div>
     </div>
 </template>
@@ -14,7 +18,8 @@ import Task from './Task'
            tasks: Array
        },
        components: {
-           Task
-       }
+           Task,
+       },
+       emits: ['delete-task'],
    }
 </script>

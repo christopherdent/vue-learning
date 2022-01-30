@@ -1,7 +1,8 @@
 <template>
   <div class="container">
     <Header title="Task Tracker" />
-    <Tasks :tasks="tasks" />
+    <Tasks @delete-task="deleteTask"
+     :tasks="tasks" />
   </div>
 </template>
 
@@ -22,7 +23,22 @@ export default {
      Tasks
       
   },
-  
+///data causes components to render 
+  data() {
+    return {
+      tasks: []
+    }
+  },
+  methods: {
+    deleteTask(id) {
+     
+      console.log('task', id)
+    if(confirm("are you sure")){
+      this.tasks = this.tasks.filter((task) => task.id !== id)     
+      }
+    }
+  },
+
   created() {
     //typically an http request would go here, for now just hardcoding
     this.tasks = [
