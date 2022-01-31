@@ -19,7 +19,7 @@
 
                 let form = document.getElementById('form')
                 let button = document.getElementById('add-button')
-                if (!form.hidden) {  //if form not hidden
+                if (!form.hidden) {  
                     form.hidden = true;
                     button.innerText = "add task";
                     button.classList.remove('btn-cancel');

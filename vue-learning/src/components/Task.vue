@@ -6,7 +6,7 @@
     >
     
     
-    <h3>{{ task.text }}
+    <h3>#{{ task.id }} {{ task.text }}  
 
         <i @click ="$emit('delete-task', task.id)" class = 'fas fa-times'></i>
     </h3>

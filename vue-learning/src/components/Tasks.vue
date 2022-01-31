@@ -1,11 +1,11 @@
 <template>
     <div>
         <div :key="task.id" v-for="task in tasks">
-            <Task @toggle-reminder="$emit('toggle-reminder', task.id)" v-on:delete-task="$emit('delete-task', task.id)" 
             
+            <Task @toggle-reminder="$emit('toggle-reminder', task.id)" v-on:delete-task="$emit('delete-task', task.id)" :task="task"/>
             
-            :task="task"/>
- <!-- <button v-on:click="onClick()" v-bind:style="{ background: color }"  class="btn">{{text}} </button> -->
+            <!-- <button v-on:click="onClick()" v-bind:style="{ background: color }"  class="btn">{{text}} </button> -->
+
         </div>
     </div>
 </template>

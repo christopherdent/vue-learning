@@ -1,10 +1,15 @@
 <template>
     <footer>
 
-<p>Copyright &copy; 2022</p>
-    <a href ="/about">About</a>
+    <p>Copyright &copy; 2022</p>
+    
+    <!-- <a href ="/about">About</a> -->
+    
+    <router-link to = "/about">About</router-link>
+    
     </footer>
-</template>
+    
+    </template>
 
 
 <style scoped>
