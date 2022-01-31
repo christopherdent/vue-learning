@@ -1,6 +1,6 @@
 <template>
 
-    <form @submit="onSubmit"  class="add-form">
+    <form @submit="onSubmit"  class="add-form" id="form">
  
         <div class="form-control">
 
@@ -59,7 +59,7 @@ export default {
             this.$emit("add-task", newTask)
 
             this.text = ""
-            this.text = ""
+            this.day = ""
             this.reminder = false
         }
     }
