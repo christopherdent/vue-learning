@@ -9,7 +9,9 @@
       <!-- </div> -->
       <Tasks @toggle-reminder="toggleReminder" @delete-task="deleteTask"
       :tasks="tasks" />
+      <Footer />
     </div>
+   
 </template>
 
 
@@ -18,6 +20,7 @@
 
 <script>
 //import components here 
+import Footer from './components/Footer'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
@@ -28,7 +31,8 @@ export default {
   components: {
      Header,
      Tasks,
-     AddTask
+     AddTask,
+     Footer
       
   },
 ///data causes components to render 
@@ -62,6 +66,7 @@ export default {
 
   created() {
     //typically an http request would go here, for now just hardcoding
+    ///request might look like this.tasks = this.fetchTasks()
     this.tasks = [
       {
         id: 1,
