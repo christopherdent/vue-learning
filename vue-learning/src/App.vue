@@ -1,10 +1,15 @@
 <template>
-  <div class="container">
-    <Header title="Task Tracker" />
-    <AddTask @add-task="addTask" />
-    <Tasks @toggle-reminder="toggleReminder" @delete-task="deleteTask"
-     :tasks="tasks" />
-  </div>
+    <div class="container">
+      <Header 
+      @toggle-add-task="toggleAddTask"
+      title="Task Tracker"
+       />
+      <!-- <div v-if="showAddTask"> tutorial's way to toggle, I did my own-->
+      <AddTask @add-task="addTask" />
+      <!-- </div> -->
+      <Tasks @toggle-reminder="toggleReminder" @delete-task="deleteTask"
+      :tasks="tasks" />
+    </div>
 </template>
 
 
@@ -29,10 +34,14 @@ export default {
 ///data causes components to render 
   data() {
     return {
+      // showAddTask: false  //tutorial way for toggle 
       tasks: []
     }
   },
   methods: {
+    // toggleAddTask(){
+    //   this.showAddTask = !this.showAddTask
+    // },  ///this method was tutorial's way to toggle. mine works fine although this is the more 'vue' way to do it.
     addTask(task){
       this.tasks = [...this.tasks, task]
     },
@@ -101,7 +110,21 @@ body {
 
 .btn {
   display: inline-block;
-  background: #000;
+  background: green;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.btn-cancel {
+  display: inline-block;
+  background: red;
   color: #fff;
   border: none;
   padding: 10px 20px;

@@ -8,8 +8,9 @@
 
         </h1>
         <Button 
+        @toggle-add-task = "$emit('toggle-add-task')"
         text = 'add task'
-        color  = 'green'
+         
         
         />
 

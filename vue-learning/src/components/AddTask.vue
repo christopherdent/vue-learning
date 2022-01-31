@@ -1,6 +1,6 @@
 <template>
 
-    <form @submit="onSubmit"  class="add-form" id="form">
+    <form @submit="onSubmit"  class="add-form" id="form" hidden>
  
         <div class="form-control">
 
